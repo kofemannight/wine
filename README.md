@@ -1,3 +1,6 @@
-# wine
-## This is example web-development.
-### Technology stack: html, css.
+# Wine
+## This is example web-development
+
+### Technology stack: 
+- html
+- css
