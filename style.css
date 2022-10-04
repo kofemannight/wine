@@ -1,8 +1,16 @@
-
+/*TODO Сделать по мере прокрутки возможность возвращения наверх
 
 /**Импорт необходимого*/
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+/**! ПЕРЕМЕННЫЕ*/
+
+:root {
+  --font-base-color: #fff;
+  --accent: #998431;
+  --link-active: #ecc733;
+}
 
 /** Обнуление */
 *,
@@ -37,16 +45,26 @@ ol {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 /**Глобальные настройки*/
+
 body {
   background-color: #fff;
   font-family: 'Montserrat', 'Playfair Display', sans-serif;
+  font-weight: 400;
   font-size: 16px;
 }
 
 .container {
-  max-width: 1110px;
+  max-width: 1170px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 /*? Стили сайта*/
@@ -62,5 +80,102 @@ body {
   background: url(img/bgc-firstscreen.webp) no-repeat center/cover;
   display: flex;
 }
+/* TODO Сделать фон на jpg для IE11*/
+/*? set-images проверить поддержку, или просто через js  проверку webp*/
+
+.first-screen_body {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 65vh;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: var(--font-base-color);
+  font-size: 13px;
+}
+
+.top-header_right a {
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: 200ms;
+}
+
+.top-header_right a:hover {
+  color: var(--accent);
+}
+
+.top-header_right a:focus {
+  color: var(--accent);
+  outline: 1px solid var(--link-active);
+  outline-style:dotted;
+}
+.top-header_right a:active {
+  color: var(--link-active);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.nav_item {
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.nav_item {
+  border-right: none;
+}
+
+.nav_item:first-child {
+  border-left: none;
+}
+
+.nav_link {
+  display: inline-block;
+  padding: 15px 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--font-base-color);
+  font-size: 14px;
+}
+
+.first-screen-button {
+  display: flex;
+  justify-content: center;
+}
+
+.first-screen-button_left,
+.first-screen-button_right {
+  display: inline-block;
+  padding: 15px;
+  background: var(--accent);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--font-base-color);
+  text-transform: uppercase;
+}
+
+.first-screen-button_left {
+  margin-right: 10px;
+}
+.first-screen-button_right {
+  margin-left: 10px;
+}
+
+
+
+
+
 
 
