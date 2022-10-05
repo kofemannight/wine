@@ -281,12 +281,22 @@ body {
 }
 
 .table-collection_table {
-  
+  border-collapse: collapse;
+  min-width: 450px;
+  height: 300px;
+  background-color: rgb(153, 170, 245);
 }
 
-.table-collection tr, 
-.table-collection td {
-  border: 2px solid red;
+.table-collection_table td:first-child {
+  border-right: 2px solid red;
+}
+
+.table-collection_table tr:not(:last-child) {
+  border-bottom: 2px solid red;
+}
+
+.table-collection_table tr td {
+  padding: 15px;
 }
 
 
