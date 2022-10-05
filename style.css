@@ -10,6 +10,7 @@
   --font-base-color: #fff;
   --accent: #998431;
   --link-active: #ecc733;
+  --base-bgc: #282828;
 }
 
 /** Обнуление */
@@ -53,6 +54,10 @@ a {
 
 /**Глобальные настройки*/
 
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
 body {
   background-color: #fff;
   font-family: 'Montserrat', 'Playfair Display', sans-serif;
@@ -94,6 +99,8 @@ body {
   margin-bottom: 65vh;
 }
 
+/*TODO Если разрешение экрана выше 1920 опустить кнопки ниже, добавить картинку в 2х размере по возможности*/
+
 .top-header {
   display: flex;
   justify-content: space-between;
@@ -103,6 +110,7 @@ body {
 }
 
 .top-header_right a {
+  padding: 5px;
   transition-property: color;
   transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
   transition-duration: 200ms;
@@ -113,10 +121,9 @@ body {
 }
 
 .top-header_right a:focus {
-  color: var(--accent);
-  outline: 1px solid var(--link-active);
-  outline-style:dotted;
+  outline: 2px solid var(--link-active);
 }
+
 .top-header_right a:active {
   color: var(--link-active);
 }
@@ -161,9 +168,10 @@ body {
 }
 
 .nav_link:focus {
-  background-color: var(--accent);
-  outline: none;
+  outline: 2px solid var(--link-active);
+  outline-offset: 0;
 }
+
 .nav_link:active {
   background-color: var(--link-active);
 }
@@ -184,6 +192,9 @@ body {
   font-weight: 500;
   color: var(--font-base-color);
   text-transform: uppercase;
+  transition-property: background-color,color;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: 300ms;
 }
 
 .first-screen-button_left {
@@ -191,6 +202,24 @@ body {
 }
 .first-screen-button_right {
   margin-left: 10px;
+}
+
+.first-screen-button_left:hover,
+.first-screen-button_right:hover {
+  background-color: var(--base-bgc);
+  color: var(--accent);
+}
+
+.first-screen-button_left:focus,
+.first-screen-button_right:focus {
+  outline: 2px solid var(--link-active);
+  outline-offset: 0;
+}
+
+.first-screen-button_left:active,
+.first-screen-button_right:active {
+  background-color: var(--link-active);
+  color: var(--font-base-color)
 }
 
 
