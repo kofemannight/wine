@@ -150,6 +150,26 @@ body {
   font-size: 14px;
 }
 
+.nav_link {
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-duration: 300ms;
+}
+
+.nav_link:hover {
+  background-color: var(--accent);
+}
+
+.nav_link:focus {
+  background-color: var(--accent);
+  outline: none;
+}
+.nav_link:active {
+  background-color: var(--link-active);
+}
+
+
+
 .first-screen-button {
   display: flex;
   justify-content: center;
