@@ -493,3 +493,44 @@ body {
   line-height: 24px;
   color: var(--font-base-color);
 }
+
+.form_wrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 541px;
+}
+
+.form_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.form_top input {
+  padding: 5px;
+  width: 100%;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--font-base-color);
+  background-color: var(--base-bgc);
+  border-bottom: 2px solid var(--bgc-collection);
+}
+
+.form_top input::placeholder {
+  padding-left: 0;
+  color: var(--font-base-color);
+}
+
+.form_top input:first-child {
+  margin-right: 30px;
+}
+
+.form_top input:focus {
+  outline: 2px solid var(--link-active);
+  border-bottom: none;
+} 
