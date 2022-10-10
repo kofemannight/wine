@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 20px;
   cursor: pointer;
-  transition-property: background;
+  transition-property: color, border, background;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-duration: 300ms;
 }
@@ -29,7 +29,6 @@
 .dropdown_button:focus,
 .dropdown_button--active {
   outline: none;
-  box-shadow: 0 0 0 2px rgb(92, 92, 92);
 }
 
 .dropdown_button::after {
